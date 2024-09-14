@@ -1,9 +1,9 @@
 //Завдання 1: Визначення дня тижня Напиши програму, яка запитує у користувача номер дня тижня (від 1 до 7)
 //і виводить назву відповідного дня (1 — понеділок, 2 — вівторок і т.д.). Використай switch case.
 
-let weekday = parseInt(promt("Enter a number 1-7 to pick a day fo the week: ")); 
+let day = parseInt(prompt("Enter a number 1-7: ")); 
 
-switch (weekday) {
+switch (day) {
   case 1:
     alert("понеділок");
     break;
@@ -42,6 +42,34 @@ switch (weekday) {
 
 let season = parseInt(prompt("Enter a number 1-12:"));
 
+switch (season) {
+  case 1:
+  case 2:
+  case 3:
+    alert("зима");
+    break;
+
+  case 4:
+  case 5:
+  case 6:
+    alert("весна");
+    break;
+
+  case 7:
+  case 8:
+  case 9:
+    alert("літо");
+    break;
+
+  case 10:
+  case 11:
+  case 12:
+    alert("осінь");
+    break;
+
+  default:
+    break;
+}
 
 //Завдання 3: Визначення категорії віку Напиши програму, яка запитує у користувача вік і визначає категорію: дитина(0 - 12),
 //підліток(13 - 17), дорослий(18 - 64), пенсіонер(65 і більше).Використай switch case.
