@@ -76,104 +76,43 @@ switch (season) {
 
 let age = parseInt(prompt("Enter your age: "));
 
-switch (age) {
-  case 0:
-  case 1:
-  case 2:
-  case 3:
-  case 4:
-  case 5:
-  case 6:
-  case 7:
-  case 8:
-  case 9:
-  case 10:
-  case 11:
-  case 12:
-    alert("дитина");
+switch (true) {
+  case age >= 0 && age <= 12:
+    console.log("Категорія: Дитина");
     break;
-
-  case 13:
-  case 14:
-  case 15:
-  case 16:
-  case 17:
-    alert("підліток");
+  case age >= 13 && age <= 17:
+    console.log("Категорія: Підліток");
     break;
-
-  case isBetween(age, 18, 64):
-  case 18:
-  case 19:
-  case 20:
-  case 21:
-  case 22:
-  case 23:
-  case 24:
-  case 25:
-  case 26:
-  case 27:
-  case 28:
-  case 29:
-  case 30:
-  case 31:
-  case 32:
-  case 33:
-  case 34:
-  case 35:
-  case 36:
-  case 37:
-  case 38:
-  case 39:
-  case 40:
-  case 41:
-  case 42:
-  case 43:
-  case 44:
-  case 45:
-  case 46:
-  case 47:
-  case 48:
-  case 49:
-  case 50:
-  case 51:
-  case 52:
-  case 53:
-  case 54:
-  case 55:
-  case 56:
-  case 57:
-  case 58:
-  case 59:
-  case 60:
-  case 61:
-  case 62:
-  case 63:
-  case 64:
-    alert("дорослий");
+  case age >= 18 && age <= 64:
+    console.log("Категорія: Дорослий");
+    break;
+  case age >= 65:
+    console.log("Категорія: Пенсіонер");
     break;
   default:
-    alert("пенсіонер");
+    console.log("Некоректне значення віку");
 }
+
 
 //Завдання 4: Вибір математичної операції Напиши програму, яка запитує у користувача операцію(+, -, *, /) і два числа.
 //Використай switch case для виконання обраної операції та виводу результату.
 
-let num1 = parseInt(prompt("Enter the firts number: "));
+let num1 = parseInt(prompt("Enter the first number: "));
 let num2 = parseInt(prompt("Enter the second number: "));
 let sign = prompt("Enther an operator (+, -, *, /): ");
-//fix quotes
+
 switch (sign) {
   case "+":
-    console.log(num1, ' + ', num1, ' = ', num1 + num2);
+    console.log(`${num1} + ${num1} =  ${num1 + num2}`);
     break;
   case "-":
-    console.log(num1, ' - ', num1, ' = ', num1 - num2);
+    console.log(`${num1} - ${num1} =  ${num1 - num2}`);
     break;
   case "*":
-    console.log(num1, ' * ', num1, ' = ', num1 * num2);
+    console.log(`${num1} * ${num1} =  ${num1 * num2}`);
     break;
   case "/":
-    console.log(num1, ' / ', num1, ' = ', num1 / num2);
+    console.log(`${num1} / ${num1} =  ${num1 / num2}`);
     break;
   default:
     break;
@@ -238,7 +177,7 @@ switch (month) {
 }
 
 //Завдання 6: Калькулятор чайових Напиши програму, яка запитує у користувача рейтинг обслуговування("відмінно", "добре", "задовільно")
-//і нараховує відсоток чайових: 20 % для "відмінно", 15 % для "добре", 10 % для "задовільно".Використай switch case.
+//і нараховує відсоток чайових: 20 % для "відмінно", 15 % для "добре", 10 % для "задовільно". Використай switch case.
 
 let sum = parseFloat(prompt("Enter the sum of your service: "));
 let tipType = prompt("Enter the rating for the service: ");
